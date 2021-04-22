@@ -1,0 +1,252 @@
+.container__background {
+  position: absolute;
+  width: 100%;
+  height: 57%;
+}
+
+.image__background {
+  background: url("./../../assets/images/bg-pattern.svg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container__image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image__circle {
+  background: url("./../../assets/images/pattern-circles.svg") no-repeat;
+  background-position-x: center;
+  background-position-y: 23%;
+  width: 100%;
+  height: 300px;
+}
+
+// Title
+
+.label__container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: -231px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  color: #293356;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.description {
+  display: flex;
+  margin-top: 10px;
+  color: hsl(225, 20%, 60%);
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+// Card
+.container__card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 130px;
+  margin-bottom: 100px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 40%;
+  background: whitesmoke;
+  border: 2px solid black;
+  border-radius: 8px;
+  height: 500px;
+}
+
+// Slider
+.label__slider__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+.label__slider {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  margin: auto;
+  align-items: center;
+}
+
+.span__slider__pageViews {
+  display: flex;
+  text-transform: uppercase;
+  color: hsl(223, 50%, 87%);
+  font-size: 17px;
+}
+
+.span__slider__price {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.span__slider__month {
+  font-size: 14px;
+  margin-left: 8px;
+  color: hsl(225, 20%, 60%);
+  align-items: center;
+}
+
+input[type=range] {
+  background-color: hsl(174, 86%, 45%);
+  width: 80%;
+  justify-content: center;
+}
+
+.input__range__container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.slider__input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+  background: #d3d3d3;
+  background: rgb(211, 203, 203);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsl(174, 77%, 34%) !important;
+  background: url('./../../assets/images/icon-slider.svg') no-repeat center;
+}
+
+.slider__input:hover {
+  opacity: 1;
+}
+
+// Switch
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 4px;
+  left: 2px;
+  right: -2px;
+  bottom: 1px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 6px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(174, 86%, 45%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+// Check span
+.checkbox__span__month {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  height: 37px;
+  margin: 0 20px -14px 60px;
+  color:  hsl(225, 20%, 60%);
+}
+
+.checkbox__span__year {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  margin: 0 0 -14px 20px;
+  height: 37px;
+  color:  hsl(225, 20%, 60%);
+}
+
+// Discount
+
+.discount__container {
+  display: flex;
+  border-radius: 25px;
+  width: 85px;
+  background:  hsl(14, 92%, 95%);
+  justify-content: center;
+  color: hsl(15, 100%, 70%);
+  height: 20px;
+  align-items: center;
+  margin-left: 10px;
+
+}

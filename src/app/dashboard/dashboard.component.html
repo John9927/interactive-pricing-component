@@ -1,0 +1,49 @@
+<!-- Image Background -->
+<div class="container__background">
+  <div class="image__background"></div>
+</div>
+<!-- Circle Image -->
+<div class="container__image">
+  <div class="image__circle"></div>
+</div>
+
+<!-- Title & Description -->
+<div style="position: relative;">
+  <div class="label__container">
+    <div class="container">
+      <h1 class="title">Simple, traffic-based pricing</h1>
+      <h4 class="description">Sign-Up for our 30-day trial. No credit card required.</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Card -->
+<div class="container__card">
+  <div class="card">
+    <div class="label__slider__container">
+      <div class="label__slider">
+        <span class="span__slider__pageViews"><span id="rangeNumber">100</span>K PageViews</span>
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <span class="span__slider__price">€<span id="rangeSlide">16.00</span></span>
+          <span class="span__slider__month">{{monthAndYear}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="input__range__container">
+      <input class="slider__input" type="range" name="" value={{value}} min={{min}} max={{max}}
+        oninput="rangeSlide.innerText = this.value" onchange="rangeNumber.innerText = this.value * 6.25" >
+    </div>
+
+    <div style="position: relative; display: flex; justify-content: center; width: 100%; text-align: center; height: 37px; align-items: center;">
+      <span class="checkbox__span__month">Monthly Billing</span>
+      <label class="switch">
+        <input type="checkbox" id="checkbox" (click)="onClick()">
+          <span class="slider round"></span>
+        </label>
+      <span class="checkbox__span__year">Yearly Billing</span>
+      <div class="discount__container">
+        <span>25% discount</span>
+      </div>
+    </div>
+  </div>
+</div>

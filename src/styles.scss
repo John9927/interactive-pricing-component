@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-size: 62.5%;
+  font-family: 'Manrope', sans-serif;
+  height: 100%;
+}
+
+*,*::after,*::before{
+  padding: unset;
+  margin: unset;
+  box-sizing: border-box;
+}
