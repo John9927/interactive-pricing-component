@@ -23,18 +23,24 @@
     <div class="label__slider__container">
       <div class="label__slider">
         <span class="span__slider__pageViews"><span id="rangeNumber">100</span>K PageViews</span>
-        <div style="display: flex; align-items: center; justify-content: center;">
+        <div class="div__range__slide">
           <span class="span__slider__price">€<span id="rangeSlide">16.00</span></span>
           <span class="span__slider__month">{{monthAndYear}}</span>
         </div>
+        <!-- Input Mobile -->
+        <div class="input__range__container mobile">
+          <input class="slider__input" type="range" name="" value={{value}} min={{min}} max={{max}}
+            oninput="rangeSlide.innerText = this.value" onchange="rangeNumber.innerText = this.value * 6.25" >
+        </div>
       </div>
     </div>
-    <div class="input__range__container">
+    <!-- Input Desktop -->
+    <div class="input__range__container desktop">
       <input class="slider__input" type="range" name="" value={{value}} min={{min}} max={{max}}
         oninput="rangeSlide.innerText = this.value" onchange="rangeNumber.innerText = this.value * 6.25" >
     </div>
 
-    <div style="position: relative; display: flex; justify-content: center; width: 100%; text-align: center; height: 37px; align-items: center;">
+    <div class="container__div__checkbox">
       <span class="checkbox__span__month">Monthly Billing</span>
       <label class="switch">
         <input type="checkbox" id="checkbox" (click)="onClick()">
@@ -42,7 +48,32 @@
         </label>
       <span class="checkbox__span__year">Yearly Billing</span>
       <div class="discount__container">
-        <span>25% discount</span>
+        <span class="discount__desktop">25% discount</span>
+        <span class="discount__mobile">-25%</span>
+      </div>
+    </div>
+
+    <hr class="separator">
+
+    <div class="container__items">
+      <div class="items">
+        <div class="item">
+          <span class="item__span">
+            <img class="img__check" src="./../../assets/images/icon-check.svg">
+            Unmilited websites
+          </span>
+          <span class="item__span">
+            <img class="img__check" src="./../../assets/images/icon-check.svg">
+            100% data ownership
+          </span>
+          <span class="item__span">
+            <img class="img__check" src="./../../assets/images/icon-check.svg">
+            Email reports
+          </span>
+        </div>
+        <div class="button__container">
+          <button class="button">Start my Trial</button>
+        </div>
       </div>
     </div>
   </div>
